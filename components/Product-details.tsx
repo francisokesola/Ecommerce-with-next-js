@@ -33,7 +33,7 @@ export const ProductDetail = ({ product }: Props) => {
         {/* Image */}
         {product.images && product.images[0] && (
           <div className="relative w-full md:w-1/2 lg:w-1/2">
-            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[480px] w-full rounded-lg overflow-hidden">
+            <div className="relative h-64 sm:h-80 md:h-96 `lg:h-[480px] w-full rounded-lg overflow-hidden">
               <Image
                 src={product.images[0]}
                 alt={product.name}
