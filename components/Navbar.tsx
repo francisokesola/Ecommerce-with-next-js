@@ -23,9 +23,9 @@ const Navbar = () => {
   return (
     <>
         <nav className="sticky top-0 z-50 bg-white shadow">
-            <div className="container mx-auto flex items-center justify-between px-4 py-4">
+            <div className="container mx-auto flex items-center justify-between px-6 py-4">
                 <Link href="/" className='font-bold text-2xl'>
-                Marstech
+                Classic Watches
                 </Link>
             
             <div className='hidden md:flex space-x-6'>
