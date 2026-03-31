@@ -35,6 +35,8 @@ const ProductCard = ({product}: Props) => {
                             src={product.images[0]}
                             fill
                             className='transition-opacity duration-500 ease-in-out object-cover'
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            loading="eager"
                         />
                     </div>
                 )}

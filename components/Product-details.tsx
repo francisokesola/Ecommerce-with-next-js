@@ -30,7 +30,7 @@ export const ProductDetail = ({ product }: Props) => {
     <div className="container mx-auto px-4 py-6 sm:py-8 lg:py-12">
       <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12 items-start md:items-center">
         
-        {/* Image */}
+     
         {product.images && product.images[0] && (
           <div className="relative w-full md:w-1/2 lg:w-1/2">
             <div className="relative h-64 sm:h-80 md:h-96 `lg:h-[480px] w-full rounded-lg overflow-hidden">
@@ -39,12 +39,13 @@ export const ProductDetail = ({ product }: Props) => {
                 alt={product.name}
                 fill
                 className="transition duration-300 hover:opacity-90 object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="eager"
               />
             </div>
           </div>
         )}
 
-        {/* Details */}
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col gap-4 lg:gap-6">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
             {product.name}
@@ -62,7 +63,6 @@ export const ProductDetail = ({ product }: Props) => {
             </p>
           )}
 
-          {/* Quantity Controls */}
           <div className="flex items-center gap-3 sm:gap-4">
             <Button
               variant="outline"

@@ -6,6 +6,7 @@ import Link from "next/link";
 import checkoutAction from "./checkout-action";
 import { Button } from "@/components/ui/button";
 
+
 const CheckoutPage = () => {
   const { items, removeItem, addItem, clearCart } = useCartStore();
   const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -36,6 +37,8 @@ const CheckoutPage = () => {
                   alt={item.name}
                   fill
                   className="object-cover rounded-md"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="eager"
                 />
               </div>
             )}

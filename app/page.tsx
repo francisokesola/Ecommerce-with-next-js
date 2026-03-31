@@ -4,6 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import Carousel from "@/components/carousel";
 import {ProductList} from "@/components/Product-list";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Classic Watches",
+  description: "Discover timeless classic watches crafted with elegance and precision. Shop premium designs for every occasion."
+} 
 
 export default async function Home() {
 
@@ -17,14 +23,7 @@ export default async function Home() {
     <div>
       <section className="bg-gray-300 py-2">
 
-        <Image
-            src="/winter-is-here/public/Elegant luxury watch close-up.png"
-            alt="Background"
-            fill
-            className="object-cover"
-            priority
-          />
-        
+      
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 justify-between px-6 sm:px-12 md:px-20 lg:px-28 my-10 md:my-16 lg:my-20">
           
           <div className="grid gap-4 items-center text-center md:text-left">
@@ -44,6 +43,8 @@ export default async function Home() {
             width={450}
             height={450}
             className="w-full max-w-xs sm:max-w-sm md:max-w-md `lg:!w-[550px] `lg:h-[450px] h-auto rounded"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="eager"
           />
 
         </div>

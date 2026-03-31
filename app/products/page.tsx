@@ -2,6 +2,13 @@ import ProductList from "@/components/Product-list"
 import { stripe } from "@/lib/stripe"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { Metadata } from "next"
+
+
+export const metadata: Metadata ={
+  title: "All Products",
+  description: "Browse our collection of quality products. Find the perfect items at great prices."
+}
 
 export default async function ProductsPage() {
 

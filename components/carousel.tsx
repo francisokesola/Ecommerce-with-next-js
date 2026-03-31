@@ -27,7 +27,14 @@ const Carousel = ({products}: Props) => {
     <Card className='relative overflow-hidden rounded-lg shadow-md border-gray-300'>
       {currentProduct.images && currentProduct.images[0] && (
         <div className='relative h-48 sm:h-64 md:h-72 lg:h-80 w-full'>
-          <Image alt={currentProduct.name} src={currentProduct.images[0]} fill className='object-cover transition-opacity duration-500 ease-in-out'/>
+          <Image 
+          alt={currentProduct.name} 
+          src={currentProduct.images[0]} 
+          fill 
+          className='object-cover transition-opacity duration-500 ease-in-out'
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading="eager"/>
+          
         </div>
       )}
       <CardContent className='absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50'>
